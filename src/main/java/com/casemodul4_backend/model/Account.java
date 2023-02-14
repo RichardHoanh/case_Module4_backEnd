@@ -18,6 +18,7 @@ public class Account {
     private String address;
     private String phone;
 
-    @ManyToMany
-    private List<Role> role;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private List<Role> roles;
 }
